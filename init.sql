@@ -26,6 +26,12 @@
 \echo '  -> ingredient_products'
 \i tables/10_ingredient_products.sql
 
+\echo '  -> whatsapp_contacts'
+\i tables/40_whatsapp_contacts.sql
+
+\echo '  -> whatsapp_messages'
+\i tables/41_whatsapp_messages.sql
+
 \echo ''
 \echo '=== Insertando datos iniciales ==='
 

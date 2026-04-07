@@ -19,5 +19,8 @@ INSERT INTO app_pages (name, route, icon, description) VALUES
 ('Gastos', '/expenses', 'money_off', 'Registro de pagos y salidas de dinero de la caja'),
 ('Equipos', '/equipments', 'precision_manufacturing', 'Inventario de activos fijos, mantenimiento y maquinaria'),
 
+-- WhatsApp
+('WhatsApp Chat', '/whatsapp', 'whatsapp', 'Chat de WhatsApp Business con clientes'),
+
 -- Admin
 ('Permisos', '/permissions', 'admin_panel_settings', 'Configuración de accesos y seguridad por usuario');

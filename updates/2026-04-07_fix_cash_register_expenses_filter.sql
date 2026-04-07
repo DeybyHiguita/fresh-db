@@ -1,0 +1,20 @@
+-- ============================================================
+-- Corrección: Filtro de gastos al cerrar caja
+-- ============================================================
+-- Problema: El cierre de caja filtraba los gastos usando CreatedAt (fecha
+--           UTC de cuando se guardó el registro), lo que causaba que gastos
+--           del día no aparecieran si el servidor guarda en UTC y Colombia
+--           opera en UTC-5, o si el usuario registró el gasto tarde.
+--
+-- Solución aplicada en el backend (CashRegisterService.cs):
+--   Se cambió el filtro para usar la columna PaymentDate (DateOnly),
+--   que contiene la fecha real del gasto según lo configuró el usuario.
+--   La comparación se hace contra la fecha local Colombia (UTC-5) del
+--   horario de apertura y cierre de la caja.
+--
+-- No se requieren cambios de esquema. El campo expenses.payment_date
+-- ya existe y contiene la fecha correcta del gasto.
+--
+-- Para verificar gastos del día en PostgreSQL:
+-- SELECT * FROM expenses WHERE payment_date = CURRENT_DATE;
+-- ============================================================
