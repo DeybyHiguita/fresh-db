@@ -20,4 +20,5 @@ INSERT INTO app_pages (name, route, icon, description) VALUES
 ('Equipos', '/equipments', 'precision_manufacturing', 'Inventario de activos fijos, mantenimiento y maquinaria'),
 
 -- Admin
-('Permisos', '/permissions', 'admin_panel_settings', 'Configuración de accesos y seguridad por usuario');
+('Permisos', '/permissions', 'admin_panel_settings', 'Configuración de accesos y seguridad por usuario'),
+('Configuración', '/settings', 'settings', 'Ajustes generales de la aplicación');
